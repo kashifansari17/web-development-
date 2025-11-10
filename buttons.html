@@ -1,0 +1,159 @@
+<!-- 
+  ===========================================================
+  HTML + CSS BUTTON STYLING EXAMPLE WITH QUESTIONS & ANSWERS
+  ===========================================================
+  This file demonstrates three buttons styled with CSS:
+    1. SUBSCRIBE (YouTube style)
+    2. JOIN (Outline blue style)
+    3. TWEET (Twitter style)
+  It also contains QUESTIONS & ANSWERS as comments for learning.
+  You can run this directly in your browser or upload to GitHub.
+  ===========================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Defines text encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes design responsive -->
+  <title>Button Styling Example</title> <!-- Page title shown on browser tab -->
+
+  <!-- ================= CSS SECTION ================= -->
+  <style>
+
+    /* -----------------------------------------------------------
+       SUBSCRIBE BUTTON
+       -----------------------------------------------------------
+       Q1: What does this button represent?
+       → A red YouTube-style subscribe button.
+       Q2: What properties define its appearance?
+       → background-color, color, border, height, width, radius.
+    ----------------------------------------------------------- */
+    .subscribe-button {
+      background-color: rgb(200, 0, 0);   /* Red background */
+      color: white;                       /* White text */
+      border: none;                       /* No border */
+      height: 36px;                       /* Fixed height */
+      width: 105px;                       /* Fixed width */
+      border-radius: 2px;                 /* Slightly rounded corners */
+      cursor: pointer;                    /* Pointer on hover */
+      margin-right: 8px;                  /* Adds space to right side */
+      transition: opacity 0.15s;          /* Smooth fade effect */
+    }
+
+    /* 
+      Q3: What does :hover do?
+      → It applies a style when the user hovers the mouse over the element.
+    */
+    .subscribe-button:hover {
+      opacity: 0.8;                       /* Slight transparency */
+    }
+
+    /* 
+      Q4: What does :active do?
+      → It applies a style when the button is clicked.
+    */
+    .subscribe-button:active {
+      opacity: 0.5;                       /* More transparent on click */
+    }
+
+    /* -----------------------------------------------------------
+       JOIN BUTTON
+       -----------------------------------------------------------
+       Q5: What is the main style difference between JOIN and SUBSCRIBE?
+       → JOIN button uses border and white background instead of solid fill.
+    ----------------------------------------------------------- */
+    .join-button {
+      background-color: white;            /* White background */
+      border-color: rgb(41, 118, 211);    /* Blue border */
+      border-style: solid;                /* Solid border line */
+      border-width: 1px;                  /* Border thickness */
+      color: rgb(41, 118, 211);           /* Blue text */
+      height: 36px;                       /* Button height */
+      width: 62px;                        /* Button width */
+      border-radius: 2px;                 /* Rounded corners */
+      cursor: pointer;                    /* Pointer cursor */
+      transition: background-color 0.15s, /* Smooth hover transition */
+                  color 0.15s;            /* Smooth color change */
+    }
+
+    /* 
+      Q6: What happens on hover?
+      → Background becomes blue and text turns white.
+    */
+    .join-button:hover {
+      background-color: rgb(41, 118, 211); /* Blue background */
+      color: white;                        /* White text */
+    }
+
+    /* 
+      Q7: What is the purpose of opacity here?
+      → Creates a press/click feedback effect.
+    */
+    .join-button:active {
+      opacity: 0.7;                        /* Slight transparency */
+    }
+
+    /* -----------------------------------------------------------
+       TWEET BUTTON
+       -----------------------------------------------------------
+       Q8: What type of button is this?
+       → A rounded Twitter-style blue button with a shadow on hover.
+    ----------------------------------------------------------- */
+    .tweet-button {
+      background-color: rgb(2, 158, 255);  /* Twitter blue */
+      color: white;                        /* White text */
+      border: none;                        /* No border */
+      height: 36px;                        /* Height */
+      width: 74px;                         /* Width */
+      border-radius: 18px;                 /* Fully rounded (pill shape) */
+      font-weight: bold;                   /* Bold text */
+      font-size: 15px;                     /* Slightly bigger font */
+      cursor: pointer;                     /* Pointer on hover */
+      margin-left: 8px;                    /* Space on left side */
+      transition: box-shadow 0.15s;        /* Smooth shadow transition */
+    }
+
+    /* 
+      Q9: What does box-shadow do?
+      → Adds a soft shadow behind the button to create depth.
+    */
+    .tweet-button:hover {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* Drop shadow */
+    }
+
+  </style>
+  <!-- ================= END OF CSS ================= -->
+</head>
+
+<body>
+  <!-- ================= HTML CONTENT ================= -->
+
+  <!-- 
+    Q10: What is the purpose of the class attribute?
+    → It connects an HTML element to a CSS class.
+  -->
+  <button class="subscribe-button">
+    SUBSCRIBE
+  </button>
+
+  <!-- 
+    Q11: How do multiple buttons align horizontally?
+    → By default, <button> elements are inline-block,
+      so they appear next to each other unless styled otherwise.
+  -->
+  <button class="join-button">
+    JOIN
+  </button>
+
+  <!-- 
+    Q12: Why use separate classes for each button?
+    → To apply different styling and hover effects independently.
+  -->
+  <button class="tweet-button">
+    Tweet
+  </button>
+
+  <!-- ================= END OF BUTTONS ================= -->
+</body>
+</html>
