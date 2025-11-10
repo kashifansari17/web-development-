@@ -1,19 +1,106 @@
+<!-- 
+  ===========================================================
+  🎬 YOUTUBE.COM CLONE (BASIC VERSION)
+  ===========================================================
+  This project demonstrates how to recreate a simple structure 
+  of YouTube's homepage using HTML and CSS.
+
+  🧠 Learning Goals:
+  1. How to use <img> for thumbnails
+  2. How to use <input> for a search bar
+  3. How to style elements using CSS classes
+  4. Understand layout basics and class selectors
+
+  ✅ This file includes:
+  - HTML structure
+  - CSS styling
+  - Questions and answers as comments for easy GitHub notes
+  ===========================================================
+-->
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>YouTube.com Clone</title>
-    <style>
-      .thumbnail {
-        width: 300px;
-      }
+<html lang="en">
+<head>
+  <!-- Q1: What does <!DOCTYPE html> mean?
+       → It tells the browser that this document uses HTML5. -->
 
-      .search-bar {
+  <meta charset="UTF-8"> <!-- Sets the character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive -->
+  <title>YouTube.com Clone</title> <!-- Page title that appears on the browser tab -->
 
-      }
-    </style>
-  </head>
-  <body>
-    <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
-    <input class="search-bar" type="text" placeholder="Search">
-  </body>
+  <!-- ====================== CSS SECTION ====================== -->
+  <style>
+
+    /* Q2: What is a class selector in CSS?
+          → It starts with a dot (.) and is used to style elements with a specific class name. */
+
+    /* ---------- THUMBNAIL IMAGE STYLE ---------- */
+    .thumbnail {
+      width: 300px;              /* Sets the width of the image */
+      border-radius: 10px;       /* Adds smooth rounded corners */
+      cursor: pointer;           /* Changes cursor to hand when hovered */
+      margin-bottom: 10px;       /* Adds space below the image */
+      transition: box-shadow 0.2s; /* Smooth shadow animation */
+    }
+
+    /* Q3: What does :hover do in CSS?
+          → It applies a style when the user hovers the mouse over an element. */
+    .thumbnail:hover {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Adds soft shadow on hover */
+    }
+
+    /* ---------- SEARCH BAR STYLE ---------- */
+    .search-bar {
+      width: 300px;               /* Width of the search box */
+      height: 36px;               /* Height of input field */
+      padding-left: 10px;         /* Space inside the box before text */
+      border-radius: 18px;        /* Rounded edges for modern look */
+      border: 1px solid #ccc;     /* Light gray border */
+      font-size: 14px;            /* Font size of the text inside */
+      outline: none;              /* Removes blue highlight when clicked */
+      transition: box-shadow 0.15s; /* Smooth focus animation */
+    }
+
+    /* Q4: What is :focus used for?
+          → It applies styles when the input box is active (clicked). */
+    .search-bar:focus {
+      box-shadow: 0 0 5px rgba(0, 0, 255, 0.3); /* Adds glow when focused */
+      border-color: rgb(41, 118, 211);          /* Changes border to blue */
+    }
+
+    /* ---------- PAGE LAYOUT STYLE ---------- */
+    body {
+      font-family: Arial, sans-serif; /* Clean readable font */
+      background-color: #f9f9f9;      /* Light gray background (like YouTube) */
+      padding: 20px;                  /* Adds spacing around all content */
+    }
+
+  </style>
+  <!-- ==================== END OF CSS ==================== -->
+</head>
+
+<body>
+  <!-- ==================== PAGE CONTENT ==================== -->
+
+  <!-- Q5: What does <img> tag do?
+       → It displays an image on the web page. -->
+  <!-- Q6: What is the purpose of class="thumbnail"?
+       → It connects this image to the .thumbnail CSS style defined above. -->
+  <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="YouTube Video Thumbnail">
+
+  <!-- Q7: What does <input type="text"> mean?
+       → It creates a text field where the user can type. -->
+  <!-- Q8: What does placeholder="Search" do?
+       → It shows a hint text before the user types anything. -->
+  <input class="search-bar" type="text" placeholder="Search">
+
+  <!-- Future Add-ons (for GitHub project growth):
+       ✅ Add a Search Button next to the input
+       ✅ Add Video Titles, Channel Name, and View Counts
+       ✅ Create a navigation bar similar to YouTube
+       ✅ Use <div> containers for grid layout of multiple thumbnails
+  -->
+
+  <!-- ==================== END OF PAGE CONTENT ==================== -->
+</body>
 </html>
